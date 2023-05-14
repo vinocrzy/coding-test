@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { NextPage, GetStaticProps } from "next";
 import axios from "axios";
+import Link from "next/link";
 
 interface Props {
   products: any[];
@@ -63,13 +64,13 @@ const Home: NextPage<Props> = ({ products }) => {
                   <div className="mt-4 flex justify-between">
                     <div>
                       <h3 className="text-sm text-gray-700">
-                        <a href="#">
+                        <Link href={`/product/${product?.id}`}>
                           <span
                             aria-hidden="true"
                             className="absolute inset-0"
                           ></span>
                           {product?.title}
-                        </a>
+                        </Link>
                       </h3>
                       <p className="mt-1 text-sm text-gray-500">
                         {product?.category}
@@ -89,7 +90,7 @@ const Home: NextPage<Props> = ({ products }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
+export const getStaticProps: GetStaticProps = async () => {
   const products = await axios?.get(
     `https://fakestoreapi.com/products?limit=4`
   );

@@ -25,10 +25,10 @@ const Header: React.FC = (props) => {
               <Link href={`/`}>Home</Link>
             </li>
             <li>
-              <Link href={`/about`}>About</Link>
+              <Link href={`#`}>About</Link>
             </li>
             <li className="has-submenu">
-              <Link href={`/shop`}>Shop</Link>
+              <Link href={`#`}>Shop</Link>
               <ul className="sub-menu">
                 {category?.map((cat) => (
                   <li key={cat}>
@@ -38,10 +38,10 @@ const Header: React.FC = (props) => {
               </ul>
             </li>
             <li>
-              <Link href={`/faq`}>FAQ</Link>
+              <Link href={`#`}>FAQ</Link>
             </li>
             <li>
-              <Link href={`/contact-us`}>Contact us</Link>
+              <Link href={`#`}>Contact us</Link>
             </li>
           </ul>
         </nav>

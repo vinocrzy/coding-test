@@ -1,5 +1,6 @@
 import { NextPage, GetServerSideProps } from "next";
 import axios from "axios";
+import Link from "next/link";
 
 interface Props {
   products: any[];
@@ -31,20 +32,20 @@ const Category: NextPage<Props> = ({ products, category }) => {
                   <div className="mt-4 flex justify-between">
                     <div>
                       <h3 className="text-sm text-gray-700">
-                        <a href="#">
+                        <Link href={`/product/${product?.id}`}>
                           <span
                             aria-hidden="true"
                             className="absolute inset-0"
                           ></span>
                           {product?.title}
-                        </a>
+                        </Link>
                       </h3>
                       <p className="mt-1 text-sm text-gray-500">
                         {product?.category}
                       </p>
                     </div>
                     <p className="text-sm font-medium text-gray-900">
-                      {product?.price}
+                      ₹ {product?.price}
                     </p>
                   </div>
                 </div>
