@@ -1,0 +1,15 @@
+@import "./scss/config";
+@import "./scss/header";
+
+main {
+  min-height: 86.5vh;
+  .banner {
+    background-color: #00000026;
+  }
+}
+
+footer {
+  padding: 0.5rem 1rem;
+  background-color: $base-primary;
+  color: #ffffff;
+}
