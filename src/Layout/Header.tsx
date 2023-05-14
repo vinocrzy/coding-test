@@ -28,7 +28,9 @@ const Header: React.FC = (props) => {
               <Link href={`#`}>About</Link>
             </li>
             <li className="has-submenu">
-              <Link href={`#`}>Shop</Link>
+              <Link href={`#`}>
+                Shop <i className="arrow down"></i>
+              </Link>
               <ul className="sub-menu">
                 {category?.map((cat) => (
                   <li key={cat}>
